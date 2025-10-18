@@ -1,0 +1,116 @@
+/* Reset and base setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+/* Colors */
+:root {
+    --bg: #0f0f11;
+    --border: #2d2d30;
+    --text: #e4e4e7;
+    --subtext: #a1a1aa;
+    --accent: #58a6ff;
+    --code-bg: #18181b;
+}
+
+/* Base layout */
+html, body {
+    height: 100%;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header + Nav */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 24px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+    opacity: 0.8;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+section {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: var(--accent);
+}
+
+/* Code blocks */
+pre {
+    background-color: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 15px;
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    color: #d4d4d8;
+    white-space: pre;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: var(--subtext);
+    border-top: 1px solid var(--border);
+}
